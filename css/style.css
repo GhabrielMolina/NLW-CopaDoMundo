@@ -2,11 +2,7 @@ body {
     background-color: #121214;
     background-image: var(--bg);
     background-position-x: center;
-    background-position-y: top;
-    background-repeat: no-repeat;
-    background-size: 100%;
-
-    /* background-position-y: -715px; */
+    background-position-y: 114%;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -25,28 +21,35 @@ body {
     --card-title-border-color: #338AF3;
     --card-border-color: #338AF3;
     --card-color-primary: #202024;
-    --bg: url(../assets/img/desktop-blue.png);
+    --bg: url(../assets/img/bg-blue.svg);
 }
 
 body.green {
     --card-title-border-color: #047C3F;
     --card-border-color: #047C3F;
     --card-color-primary: #1A1F1B;
-    --bg: url(../assets/img/desktop-green.png);
+    --bg: url(../assets/img/bg-green.svg);
 }
 
 body.yellow {
     --card-title-border-color: #746615;
     --card-border-color: #F7DD43;
     --card-color-primary: #1D1C19;
-    --bg: url(../assets/img/desktop-yellow.png);
+    --bg: url(../assets/img/bg-yellow.svg);
 }
 
 body.red {
-    --card-title-border-color: #047C3F;
-    --card-border-color: #047C3F;
-    --card-color-primary: #1A1F1B;
-    --bg: url(../assets/img/desktop-red.png);
+    --card-title-border-color: #b62121;
+    --card-border-color: #ff0000;
+    --card-color-primary: rgb(68, 5, 5);
+    --bg: url(../assets/img/bg-red.svg);
+}
+
+body.purple {
+    --card-title-border-color: #B026FF;
+    --card-border-color: #cc00a0;
+    --card-color-primary: rgb(26, 2, 27);
+    --bg: url(../assets/img/bg-purple.svg);
 }
 
 
@@ -156,6 +159,10 @@ body.red {
 
 /* PC'S & TABLET SUPORT */
 @media (min-width: 700px) {
+    body {
+        background-size: 100%;
+    }
+
     #principal .cards {
         flex-direction: row;
         max-width: 670px;
