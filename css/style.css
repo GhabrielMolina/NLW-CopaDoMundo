@@ -1,0 +1,206 @@
+body {
+    background-color: #121214;
+    background-image: var(--bg);
+    background-position-x: center;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    /* background-position-y: -715px; */
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: fit-content;
+    margin: 52px auto;
+}
+
+
+/* COLORS */
+
+/* Raiz do projeto */
+:root {
+
+    /* Criação de váriaveis */
+    --card-title-border-color: #338AF3;
+    --card-border-color: #338AF3;
+    --card-color-primary: #202024;
+    --bg: url(../assets/img/desktop-blue.png);
+}
+
+body.green {
+    --card-title-border-color: #047C3F;
+    --card-border-color: #047C3F;
+    --card-color-primary: #1A1F1B;
+    --bg: url(../assets/img/desktop-green.png);
+}
+
+body.yellow {
+    --card-title-border-color: #746615;
+    --card-border-color: #F7DD43;
+    --card-color-primary: #1D1C19;
+    --bg: url(../assets/img/desktop-yellow.png);
+}
+
+body.red {
+    --card-title-border-color: #047C3F;
+    --card-border-color: #047C3F;
+    --card-color-primary: #1A1F1B;
+    --bg: url(../assets/img/desktop-red.png);
+}
+
+
+#header {
+    margin-bottom: 63px;
+    text-align: center;
+}
+
+#principal .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+#principal .cards .card{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    width: 270px;
+    padding: 32px 23px;
+    text-align: center;
+    background: var(--card-color-primary);
+    border-bottom: 2px solid var(--card-border-color);
+    border-radius: 6px;
+}
+
+#principal .cards .card .card-date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: fit-content;
+    margin-inline: auto;
+    margin-bottom: 53px;
+    gap: 16px;
+    padding: 8px 16px;
+
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    color: #F7DD43;
+    border: 1px solid var(--card-title-border-color);
+    border-radius: 6px;
+}
+
+#principal .cards .card .card-date .card-day {
+    color: #E1E1E6;
+    font-size: 14px;
+}
+
+#principal .cards .card li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+}
+
+/* Pegar o li que tenha um li anterior (ou seja, apartir do 2º li) */
+#principal .cards .card li + li {
+    padding-top: 24px;
+    border-top: 1px solid #323238;
+}
+
+#principal .cards .card li img {
+    width: 50px;
+    height: 50px;
+}
+
+#principal .cards .card li p {
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 125%;
+    color: #E1E1E6;
+}
+
+
+
+/* TRANSITION & KEYFRAME*/
+
+#principal .cards .card .card-date:hover,
+#principal .cards .card li img:hover,
+#principal .cards .card li p:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+
+.card {
+    opacity: 0;
+    animation: nameAnimation 2s forwards;
+} 
+
+@keyframes nameAnimation {     
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+                        /* AT-RULE  */
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+/* PC'S & TABLET SUPORT */
+@media (min-width: 700px) {
+    #principal .cards {
+        flex-direction: row;
+        max-width: 670px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ANOTAÇÕES */
+
+
+/*      width = fit-content      ==      a caixa usará o espaço disponível */
+
+
+
+/* KEYFRAME */
+
+/* 
+forwars = O elemento manterá as mesmas propriedades de animação  do último 
+quadro-chave após a conclusão da animação.
+*/
+
+
+
+
+/* 
+Pega somente o filho desejado (1 ou 2 ou 3...)
+(Fiz no JS (Mais Simplificado)
+
+.card:nth-child(1) {
+    animation-delay: .2s;
+}
+
+.card:nth-child(2) {
+    animation-delay: .4s;
+} 
+*/
+
+
+
